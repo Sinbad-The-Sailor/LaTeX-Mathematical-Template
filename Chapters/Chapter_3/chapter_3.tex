@@ -1,0 +1,25 @@
+     \section{Some Mathematics}
+     \blindmathtrue
+     \blindmathpaper
+     
+    $$
+        \text{max} \quad z = \sum_{i \in T}\sum_{j \in N}(f_j-k_j)x_{ij}-\sum_{i \in T}\sum_{p \in F}h_{ip}y_{ip}-\sum_{i \in T}3.5w_i-\sum_{i \in T}0.01L_{i+1} 
+    $$
+    \begin{alignat*}{3}
+        &\text{s.t.} &\quad& \sum_{j \in N}t_jx_{ij} \leq a_i, &\qquad\qquad&  \forall i \in T \label{myLabel}\\
+        &\text{} && \sum_{j \in N}r_jx_{ij} \leq b_i+w_i, &&  \forall i \in T
+        \label{myLabel}\\
+        &\text{} && \sum_{j \in N}s_jx_{ij} \leq c_i, &&  \forall i \in T
+        \label{myLabel}\\
+        &\text{} && \sum_{j \in N}\lambda_jx_{ij} \leq L_{max}, &&  \forall i \in T
+        \label{myLabel}\\
+        &\text{} && L_{i+1}=L_i + \sum_{p \in F}y_{ip} - \sum_{j \in N}\lambda_j x_{ij}, &&  \forall i \in 1..v
+        \label{myLabel}\\
+        &\text{} && y_{i1} \leq \gamma_i,\quad y_{ip} \geq 0, &&  \forall j \in J
+        \label{myLabel}\\
+        &\text{} && w_i \leq \epsilon_i, &&  \forall i \in T \quad j \in N
+        \label{myLabel}\\
+        &\text{} && L_{i+1} \geq 0, \quad L_{max} = 250 000, &&  \forall i \in T
+        \label{myLabel}\\
+        &\text{} && x_{ij} \geq 1000, &&  \forall i \in T \quad j \in N
+    \end{alignat*}
